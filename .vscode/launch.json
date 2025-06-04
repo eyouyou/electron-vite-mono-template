@@ -16,6 +16,24 @@
             "runtimeArgs": [
                 "dev"
             ],
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Renderer: Attach to Vite (Chrome)",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/packages/renderer",
+            "url": "http://localhost:5173"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "启动electron联调",
+            "configurations": [
+                "调试electron",
+                "Renderer: Attach to Vite (Chrome)"
+            ],
+            // "preLaunchTask": "pnpm install" // 可选：启动前执行任务
         }
     ]
 }
