@@ -147,6 +147,8 @@ async function main() {
     await server.close()
     process.exit(0)
   })
+
+  console.log('✅ electron is ready ...')
 }
 
 main()
